@@ -1,0 +1,37 @@
+#sparkles > path {
+	animation: sparklyBits 1000ms infinite;
+	position: absolute;
+}
+
+#message {
+	margin-left: 15px;
+	text-align: center;
+}
+
+@for $i from 1 through 29 {
+	#sparkles > path:nth-child(#{$i}) {
+		animation-delay: (35ms * $i);
+	}
+}
+
+@keyframes sparklyBits {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.Preloader {
+	flex-flow: column;
+  top: 0;
+  left: 0;
+  position: fixed;
+	align-items: center;
+	background-color: #FAFAFA;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	width: 100vw;
+}

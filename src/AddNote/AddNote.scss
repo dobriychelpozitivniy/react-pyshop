@@ -1,0 +1,11 @@
+.AddNote {
+  text-align: center;
+  align-items: center;
+  &__form {
+    margin: 0 auto;
+  }
+  &__textarea {
+    resize: none;
+    // height: 100px;
+  }
+}
