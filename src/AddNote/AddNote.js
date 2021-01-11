@@ -43,21 +43,8 @@ export default class AddNote extends Component {
     e.preventDefault()
   }
 
-  renderError(controlName) {
-    const control = this.state.formControls[controlName]
-
-    if (control.touched) {
-      return (
-        control.valid
-          ? <div style={{ color: 'green' }}>{control.label}: все отлично!</div>
-          : <div style={{ color: 'red' }}>{control.label}: введите верное значение поля</div>
-      )
-    } else {
-      return (
-        <div>Введите значение</div>
-      )
-    }
-  }
+ 
+  
 
   renderInputs() {
     const control = this.state.formControls

@@ -124,11 +124,7 @@ export default class Auth extends Component {
 
   renderError(controlName) {
     const control = this.state.formControls[controlName]
-
-    
-
     if (control.touched) {
-      
       return (
         control.valid
           ? null
