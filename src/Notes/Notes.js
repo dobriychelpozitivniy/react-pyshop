@@ -32,34 +32,18 @@ export default class Notes extends Component {
     let result = fuse.search(search)
     for(let i = 0; i < result.length; i++) {
       result[i] = result[i].item
-      // console.log(result1[i])
     }
     console.log(result)
-    // this.setState({inputTest: search})
     return result
   }
 
   renderNotes = (event = 0) => {
-    // var test = 0
     let notes = this.state.notes
     console.log(notes)
-    //////
 
     notes = event ?  this.filter(this.state.notes,event) : this.state.notes
-    
-    // console.log("event", notes)
 
-
-    /////
-    
     return notes.map((note,i) => {
-      // console.log("note: ",note)
-      // console.log("noteNAME: ",note.name)
-      // console.log("noteITEM: ",note.item)
-      // console.log("noteITEMname:",note.item.name)
-      // console.log(note.date)
-      
-      // console.log(date)
       return (
           <Note
            name={note.name}
@@ -116,10 +100,7 @@ export default class Notes extends Component {
     return (
       this.state.isLoad 
        ? <Preloader />
-       :
-      <>
-      
-       
+       : <>
       <p style={{textAlign: 'center'}}>
       <span>Фильтр: </span>
       <input 

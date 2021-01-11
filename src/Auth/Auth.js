@@ -137,17 +137,6 @@ export default class Auth extends Component {
     } 
   }
 
-  // validColor(controlName) {
-  //   const formControls = { ...this.state.formControls }
-  //   const control = { ...formControls[controlName] }
-  //   control.color = 'green'
-  //     formControls[controlName] = control
-  //     this.setState({
-  //       formControls
-  //     })
-
-  // }
-
   renderButtons() {
     return (
       <>
@@ -198,14 +187,6 @@ export default class Auth extends Component {
         }, 1500);
       })
       .catch((error) => {
-        // const err = {
-        //   isErrorLoginOrRegister: true,
-        //   messageErrorLoginOrRegister: error.message
-        // }
-        // this.setState({
-        //   errorLoginOrRegister: err
-        // })
-        // console.log(this.state)
         console.log(error)
         this.identifyErrorFirebase(error)
         setTimeout(() => {

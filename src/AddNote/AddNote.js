@@ -68,7 +68,6 @@ export default class AddNote extends Component {
       <>
        <label style={{color: control.name.color}} htmlFor="">{control.name.label}: </label>
           <input
-            // style={{marginBottom: '10px'}}
             type={control.name.type}
             id={htmlFor}
             value={control.name.value}
@@ -83,7 +82,6 @@ export default class AddNote extends Component {
           <label style={{display: 'inline-block', verticalAlign: 'top', marginRight: '10px', color: control.text.color}} htmlFor="">{control.text.label}: </label>
           <textarea
             className='AddNote__textarea'
-          //  style={{marginBottom: '10px'}}
             id={htmlFor + 1}
             value={control.text.value}
             rows="5" 
@@ -111,10 +109,6 @@ export default class AddNote extends Component {
     if (validation.required) {
       isValid = value.trim() !== '' && isValid
     }
-
-    // if (validation.email) {
-    //   isValid = is.email(value) && isValid
-    // }
 
     if (validation.minLength) {
       isValid = value.length >= validation.minLength && isValid
